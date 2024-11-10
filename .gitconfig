@@ -1,0 +1,39 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;                                                                              ;
+;                                                                              ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Copyright (c) nc0 2015.  All rights reserved.
+
+[user]
+	name = nc0
+	email = n@nc0.fr
+	signingKey = 762349F5DB99D315
+	useConfigOnly = true
+[core]
+	editor = "$EDITOR"
+[credential]
+	helper = "cache --timeout=7200"
+[gpg]
+	program = gpg
+	format = openpgp
+
+[init]
+	defaultBranch = master
+[commit]
+	gpgSign = true
+	status = true
+	verbose = true
+[push]
+	gpgSign = if-asked
+[tag]
+	gpgSign = true
+[format]
+	signOff = true
+	coverLetter = auto
+	encodeEmailHeaders = true
+[sendemail]
+	smtpEncryption = ssl
+	smtpServer = smtp.mail.me.com
+	smtpServerPort = 587
+	smtpUser = n@nc0.fr
+
