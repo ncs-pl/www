@@ -32,6 +32,10 @@
 	gpgSign = if-asked
 [tag]
 	gpgSign = true
+[log]
+	decorate      = full
+	showSignature = true
+	mailmap       = true
 [format]
 	signOff = true
 	coverLetter = auto

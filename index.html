@@ -20,7 +20,7 @@
 <meta name="author"       content="nc0">
 <meta name="description"  content="nc0 is a system programmer.">
 <meta name="keywords"     content="nc0,system,programming,computers">
-<meta name="theme-color"  content="#48eaab">
+<meta name="theme-color"  content="#40fdfa">
 <meta name="color-scheme" content="only dark">
 
 <link rel="shortcut icon"                href="favicon.ico">
@@ -44,54 +44,189 @@
 <meta name="twitter:description" content="nc0 is a system programmer">
 
 <link rel="canonical" href="https://nc0.fr">
+<link rel="me"        href="https://mastodon.puffer.fish/@nico">
 
 
 <style>
-<!-- TODO(nc0) -->
+html { background: #072626; color: #D3B58D; }
+
+::selection { background-color: #0000FF; /* Safari */ padding: 10px; }
+a { color: #D3B58D; }
+img { width: 100%; height: auto; }
+pre { }
+
+header { text-align: center; }
+
+main { max-width: 33em; }
+
+aside    { padding: 0; float: left; }
+aside ul { list-style-type: none; margin: 0; padding: 0; }
+
+footer { text-align: center; }
+
+
+/* FUNCTIONAL CSS */
+
+
+/* SMART LAYOUT (IE10+ support)*/
+
+.sl-horizontal {
+/* Creates a smart layout oriented horizontally.  Children will not wrap
+ * unless sl-wrap is also applied.
+ *
+ *                                                                 MAIN AXIS
+ *     <div class="sl-horizontal">     ------------------------>
+ *         <div id="1"></div>        | +-------------------+
+ *         <div id="2"></div>        | | +---+ +---+ +---+ |
+ *         <div id="3"></div>        | | | 1 | | 2 | | 3 | |
+ *     </div>                        | | +---+ +---+ +---+ |
+ *                                   | +-------------------+
+ *                                   |
+ *                                   V  CROSS AXIS
+ */
+	display:        inline-flex;
+	display:        inline-flexbox; /* 2012 syntax */
+	flex-direction: row;
+	flex-wrap:      nowrap;
+}
+.sl-vertical {
+/* Creates a smart layout oriented vertically.  Children will not wrap unless
+ * sl-wrap is also applied.
+ *
+ *                                        CROSS AXIS
+ *     <div class="sl-vertical">       ------------>
+ *         <div id="1"></div>        | +-------+
+ *         <div id="2"></div>        | | +---+ |
+ *         <div id="3"></div>        | | | 1 | |
+ *     </div>                        | | +---+ |
+ *                                   | | +---+ |
+ *                                   | | | 2 | |
+ *                                   | | +---+ |
+ *                                   | | +---+ |
+ *                                   | | | 3 | |
+ *                                   | | +---+ |
+ *                                   | +-------+
+ *                                   |
+ *                                   V  MAIN AXIS
+ */
+	display:        inline-flex;
+	display:        inline-flexbox; /* 2012 syntax */
+	flex-direction: column;
+	flex-wrap:      nowrap;
+}
+
+.sl-wrap {
+/* Makes children of a smart layout wrap on a new line in the direction of the
+ * cross axis.
+ *
+ *                                                                 MAIN AXIS
+ *     <div class="sl-horizontal sl-wrap">     ------------------------>
+ *         <div id="1"></div>                 | +-------------------+
+ *         <div id="2"></div>                 | | +---+ +---+ +---+ |
+ *         <div id="3"></div>                 | | | 1 | | 2 | | 3 | |
+ *         <div id="4"></div>                 | | +---+ +---+ +---+ |
+ *     </div>                                 | | +---+ +---+       |
+ *                                            | | | 4 | | 5 |       |
+ *                                            | | +---+ +---+       |
+ *                                            | +-------------------+
+ *                                            |
+ *                                            V  CROSS AXIS
+ */
+	flex-wrap: wrap;
+}
+
+sl-horizontal sl-top-left {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+sl-horizontal sl-top {
+	align-items: flex-start;
+	justify-content: center;
+}
+sl-horizontal sl-top-right {
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+sl-horizontal sl-left {
+	align-items: center;
+	justify-content: flex-start;
+}
+sl-horizontal sl-center {
+	align-items: center;
+	justify-content: center;
+}
+sl-horizontal sl-right {
+	align-items: center;
+	justify-content: flex-end;
+}
+sl-horizontal sl-bottom-left {
+	align-items: flex-end;
+	justify-content: flex-start;
+}
+sl-horizontal sl-bottom {
+	align-items: flex-end;
+	justify-content: center;
+}
+sl-horizontal sl-bottom-right {
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+
 </style>
 
+<aside>
+<details open>
+	<summary>Navigation</summary>
+	<nav>
+	<section>
+	<ul>
+		<li>
+		<a href="#about-me">About me</a>
+		<li>
+		<a href="mailto:n@nc0.fr">n@nc0.fr</a> (<a href="pgp">PGP</a>)
+		<li>
+		<a href="https://puffer.fish/~nico">::&lt;_&gt;</a>
+		<li>
+		<a href="https://x.com/nc0___">Twitter</a>
+		<li>
+		<a href="https://mastodon.puffer.fish/@nico">Mastodon</a>
+		<li>
+		<a href="https://github.com/ncs-pl">GitHub</a>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Projects</h2>
+	<ul>
+		<li>
+		<a href="https://github.com/ncs-pl/life2">Life2</a>
+		<li>
+		<a href="https://github.com/discordnova/Nova">Nova</a>
+		<li>
+		<a href="https://github.com/ncs-pl/clawflake">Clawflake</a>
+	</ul>
+	</section>
+
+	<section>
+	<h2>Log</h2>
+	<ul></ul>
+	</section>
+	</nav>
+</details>
+</aside>
 
 <main>
+<header>
 <h1 id="nc0">nc0</h1>
+</header>
 
-<p>
-Hi, I'm a wannabe system programmer hacking on computers.
-You can find me on <a href="https://twitter.com/nc0___">Twitter</a> and
-<a rel="me" href="https://mastodon.puffer.fish/@nico">Mastodon</a>.
-For serious communication, please contact me at
-&lt;<a href="mailto:n@nc0.fr">n@nc0.fr</a>&gt; (<a href="pgp">PGP</a>).
-
-<p>
-I'm also part of the <a href="https://puffer.fish/~nico">Puffer Fish</a>
-initiative.
-
-
-<section>
-<h2 id="projects">Projects</h2>
-<ul>
-	<li><p>
-	<a href="https://github.com/ncs-pl/life2">Life2</a>
-	<br>
-	Archived. A non-serious research project about the evolution of cells
-	given pseudo-random rules over times, using a game inspired by
-	Conway's Game of Life.
-
-	<li><p>
-	<a href="https://github.com/discordnova/Nova">Nova</a>
-	<br>
-	A distributed infrastructure and platform to create bots on social
-	media platforms (supporting only Discord for now).
-
-	<li><p>
-	<a href="https://github.com/ncs-pl/clawflake">Clawflake</a>
-	<br>
-	A distributed ID generation system whose numbers can be sorted in
-	real-time in a fast manner, for high-throughput platforms.
-</ul>
-</section>
-</main>
+<h2 id="about-me">About me</h2>
+<p>hello, i'm nc0, a wannabe system programmer and computer hacker.
 
 <footer>
-<p>© nc0 2024
+<p>Copyright (c) nc0 2024
 </footer>
+</main>
+
 </html>
