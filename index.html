@@ -1,45 +1,187 @@
 <!DOCTYPE html>
-<HTML>
-  <HEAD>
-    <TITLE>~nico</TITLE>
-    <META CHARSET="utf-8">
-    <META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
-    <LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
+<HTML CLASS="no-margin no-padding">
+<HEAD>
+  <TITLE>~nico</TITLE>
+  <META CHARSET="utf-8">
+  <META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
+  <META NAME="author" CONTENT="Nicolas Paul">
+  <META NAME="description" CONTENT="Wants to be a system programmer.">
 
-    <STYLE>
-    HTML {
-      margin: auto;
-      max-width: 57ch;
-      font-size: 14pt;
-    }
+  <META PROPERTY="og:title" CONTENT="~nico">
+  <META PROPERTY="og:type" CONTENT="profile">
+  <META PROPERTY="og:url" CONTENT="http://puffer.fish/~nico">
+  <META PROPERTY="og:description" CONTENT="Wants to be a system programmer.">
+  <META PROPERTY="og:determiner" CONTENT="">
+  <META PROPERTY="og:locale" CONTENT="en_US">
+  <META PROPERTY="og:site_name" CONTENT="puffer.fish">
+  <META PROPERTY="profile:first_name" CONTENT="Nicolas">
+  <META PROPERTY="profile:last_name" CONTENT="Paul">
+  <META PROPERTY="profile:username" CONTENT="nico">
+  <META PROPERTY="profile:gender" CONTENT="male">
 
-    HEADER, FOOTER { text-align: center; }
+  <META NAME="twitter:card" CONTENT="summary">
+  <META NAME="twitter:site" CONTENT="@nc0___">
+  <META NAME="twitter:title" CONTENT="~nico">
+  <META NAME="twitter:description" CONTENT="Wants to be a system programmer.">
 
-    IMG {
-      width: 100%;
-      height: auto;
-    }
-    </STYLE>
-  </HEAD>
-  <BODY>
-    <HEADER>
-      <H1 ID="nico">NICO</H1>
-    </HEADER>
+  <LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
+  <LINK REL="canonical" HREF="http://puffer.fish/~nico">
 
-   <MAIN>
-      <P>
-      Hey, I want to be a system programmer.
-      I'm also available using electronic mails at <CODE><A HREF="mailto:n@nc0.fr">nico@puffer.fish</A></CODE>.
-      </P>
+  <STYLE>
+  /****************************************************************************
+   * Stylesheet reset and patches for some User Agents with "special needs".  *
+   ***************************************************************************/
 
-      <!-- TODO(nico): blog on failure as a natural property of systems -->
-      <!-- TODO(nico): blog on extensibility and modding -->
-      <!-- TODO(nico): blog on the advantages of uniformity -->
-    </MAIN>
+  IMG {
+    width: 100%;
+    height: auto;
+  }
 
-    <FOOTER>
-      <P>&copy; 2025</P>
-    </FOOTER>
-  </BODY>
+  A, A:visited, A:hover {
+    color: unset;
+    text-decoration-color: unset;
+  }
+
+  /****************************************************************************
+   * Composable CSS                                                           *
+   ***************************************************************************/
+
+  /** Widths, heights, spaces ************************************************/
+
+  .sized { max-width: 33em; }
+
+  .with-margin { margin: auto; }
+  .no-margin { margin: none; }
+  .xs-margin { margin: 0.5em; }
+  .s-margin { margin: 1em; }
+  .m-margin { margin: 1.5em; }
+  .l-margin { margin: 2em; }
+  .xl-margin { margin: 2.5em; }
+
+  .with-top-margin { margin-top: auto; }
+  .no-top-margin { margin-top: none; }
+  .xs-top-margin { margin-top: 0.5em; }
+  .s-top-margin { margin-top: 1em; }
+  .m-top-margin { margin-top: 1.5em; }
+  .l-top-margin { margin-top: 2em; }
+  .xl-top-margin { margin-top: 2.5em; }
+
+  .with-bottom-margin { margin-bottom: auto; }
+  .no-bottom-margin { margin-bottom: none; }
+  .xs-bottom-margin { margin-bottom: 0.5em; }
+  .s-bottom-margin { margin-bottom: 1em; }
+  .m-bottom-margin { margin-bottom: 1.5em; }
+  .l-bottom-margin { margin-bottom: 2em; }
+  .xl-bottom-margin { margin-bottom: 2.5em; }
+
+  .with-left-margin { margin-left: auto; }
+  .no-left-margin { margin-left: none; }
+  .xs-left-margin { margin-left: 0.5em; }
+  .s-left-margin { margin-left: 1.5em; }
+  .m-left-margin { margin-left: 2em; }
+  .l-left-margin { margin-left: 2.5em; }
+  .xl-left-margin { margin-left: 3em; }
+
+  .with-right-margin { margin-right: auto; }
+  .no-right-margin { margin-right: none; }
+  .xs-right-margin { margin-right: 0.5em; }
+  .s-right-margin { margin-right: 1em; }
+  .m-right-margin { margin-right: 1.5em; }
+  .l-right-margin { margin-right: 2em; }
+  .xl-right-margin { margin-right: 2.5em; }
+
+  .with-padding { padding: auto; }
+  .no-padding { padding: none; }
+  .xs-padding { padding: 0.5em; }
+  .s-padding { padding: 1em; }
+  .m-padding { padding: 1.5em; }
+  .l-padding { padding: 2em; }
+  .xl-padding { padding: 2.5em; }
+
+  .with-top-padding { padding-top: auto; }
+  .no-top-padding { padding-top: none; }
+  .xs-top-padding { padding-top: 0.5em; }
+  .s-top-padding { padding-top: 1em; }
+  .m-top-padding { padding-top: 1.5em; }
+  .l-top-padding { padding-top: 2em; }
+  .xl-top-padding { padding-top: 2.5em; }
+
+  .with-bottom-padding { padding-bottom: auto; }
+  .no-bottom-padding { padding-bottom: none; }
+  .xs-bottom-padding { padding-bottom: 0.5em; }
+  .s-bottom-padding { padding-bottom: 1em; }
+  .m-bottom-padding { padding-bottom: 1.5em; }
+  .l-bottom-padding { padding-bottom: 2em; }
+  .xl-bottom-padding { padding-bottom: 2.5em; }
+
+  .with-left-padding { padding-left: auto; }
+  .no-left-padding { padding-left: none; }
+  .xs-left-padding { padding-left: 0.5em; }
+  .s-left-padding { padding-left: 1em; }
+  .m-left-padding { padding-left: 1.5em; }
+  .l-left-padding { padding-left: 2em; }
+  .xl-left-padding { padding-left: 2.5em; }
+
+  .with-right-padding { padding-right: auto; }
+  .no-right-padding { padding-right: none; }
+  .xs-right-padding { padding-right: 0.5em; }
+  .s-right-padding { padding-right: 1em; }
+  .m-right-padding { padding-right: 1.5em; }
+  .l-right-padding { padding-right: 2em; }
+  .xl-right-padding { padding-right: 2.5em; }
+
+  /** Texts ******************************************************************/
+
+  .left { text-align: left; }
+  .center { text-align: center; }
+  .right { text-align: right; }
+
+  .sans { font-family: ui-sans-serif, sans-serif; }
+  .serif { font-family: ui-serif, serif; }
+  .mono { font-family: ui-monospace, monospace; }
+
+  .white { color: rgb(255 255 255); text-decoration-color: rgb(255 255 255); }
+  .black { color: rgb(0 0 0); text-decoration-color: rgb(0 0 0); }
+  .red { color: rgb(194 32 50); text-decoration-color: rgb(194 32 50); }
+  .orange { color: rgb(188 76 39); text-decoration-color: rgb(188 76 39); }
+  .yellow { color: rgb(247 183 24); text-decoration-color: rgb(247 183 24); }
+  .purple { color: rgb(97 51 147); text-decoration-color: rgb(97 51 147); }
+  .blue { color: rgb(24 72 152); text-decoration-color: rgb(24 72 152); }
+  .green { color: rgb(101 141 60); text-decoration-color: rgb(101 141 60); }
+
+  .small { font-size: 0.733em; }
+  .normal { font-size: 0.98em; }
+  .big { font-size: 2.94em; }
+  .huge { font-size: 3.653em; }
+
+  /** Surfaces ***************************************************************/
+
+  .on-white { background-color: rgb(255 255 255); }
+  .on-black { background-color: rgb(0 0 0); }
+  .on-red { background-color: rgb(194 32 50); }
+  .on-orange { background-color: rgb(188 76 39); }
+  .on-yellow { background-color: rgb(247 183 24); }
+  .on-purple { background-color: rgb(97 51 147); }
+  .on-blue { background-color: rgb(24 72 152); }
+  .on-green { background-color: rgb(101 141 60); }
+
+  .elevated { box-shadow: rgb(238 238 238) 2px 2px 0px 0px; }
+  .bordered { border-style: solid; border-width: thin; border-color: rgb(35 31 32); }
+</STYLE>
+</HEAD>
+
+<BODY CLASS="black on-blue left sans normal">
+<DIV CLASS="sized with-margin xs-padding darkgrey on-white elevated bordered">
+  <H1 ID="nico" CLASS="center huge">~NICO</H1>
+
+  <P>
+  Hey, I want to be a system programmer.
+  I'm also available using electronic mails at <CODE CLASS="mono on-yellow">nico@puffer.fish</CODE>.
+  Everything on this page is my own opinion and may not reflect my employer's.
+  </P>
+
+  <HR CLASS="bordered">
+  <P CLASS="center small">&copy; 2017-2025. All rights reserved.</P>
+</DIV>
+</BODY>
 </HTML>
-
