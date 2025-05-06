@@ -15,8 +15,7 @@
                               at nico@puffer.fish.
 
                                      ~nico
-                              Copyright (c) 2015.
--->
+                              Copyright (c) 2015.                            -->
 <HEAD>
   <TITLE>~nico</TITLE>
   <META CHARSET="utf-8">
@@ -49,6 +48,39 @@
    * Stylesheet reset and patches for some User Agents with "special needs".   *
    ****************************************************************************/
 
+  HTML {
+    max-width: 33em;
+    margin: auto;
+    background-color: rgb(100 148 237);
+    color: rgb(35 31 32);
+    text-align: left;
+    font-family: ui-sans-serif, sans-serif;
+    font-size: 14pt;
+  }
+
+  BODY > DIV {
+    padding: 0.5em;
+    background-color: rgb(255 248 220);
+    color: rgb(35 31 32);
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(35 31 32);
+    box-shadow: rgb(209 204 184) 4px 4px 0px 0px;
+  }
+
+  H1 {
+    font-size: 3.653em;
+    text-align: center;
+  }
+
+  H2 {
+    font-size: 1.753em;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  CODE { font-family: ui-monospace, monospace; }
+
   IMG {
     width: 100%;
     height: auto;
@@ -59,142 +91,54 @@
     text-decoration-color: unset;
   }
 
+
   /*****************************************************************************
    * Composable CSS                                                            *
    ****************************************************************************/
-
-  /** Widths, heights, spaces *************************************************/
-
-  .sized { max-width: 33em; }
-
-  .with-margin { margin: auto; }
-  .no-margin { margin: none; }
-  .little-margin { margin: 0.5em; }
-  .large-margin { margin: 2.5em; }
-
-  .with-top-margin { margin-top: auto; }
-  .no-top-margin { margin-top: none; }
-  .little-top-margin { margin-top: 0.5em; }
-  .large-top-margin { margin-top: 2.5em; }
-
-  .with-bottom-margin { margin-bottom: auto; }
-  .no-bottom-margin { margin-bottom: none; }
-  .little-bottom-margin { margin-bottom: 0.5em; }
-  .large-bottom-margin { margin-bottom: 2.5em; }
-
-  .with-left-margin { margin-left: auto; }
-  .no-left-margin { margin-left: none; }
-  .little-left-margin { margin-left: 0.5em; }
-  .large-left-margin { margin-left: 3em; }
-
-  .with-right-margin { margin-right: auto; }
-  .no-right-margin { margin-right: none; }
-  .little-right-margin { margin-right: 0.5em; }
-  .large-right-margin { margin-right: 2.5em; }
-
-  .with-padding { padding: auto; }
-  .no-padding { padding: none; }
-  .little-padding { padding: 0.5em; }
-  .large-padding { padding: 2.5em; }
-
-  .with-top-padding { padding-top: auto; }
-  .no-top-padding { padding-top: none; }
-  .little-top-padding { padding-top: 0.5em; }
-  .large-top-padding { padding-top: 2.5em; }
-
-  .with-bottom-padding { padding-bottom: auto; }
-  .no-bottom-padding { padding-bottom: none; }
-  .little-bottom-padding { padding-bottom: 0.5em; }
-  .large-bottom-padding { padding-bottom: 2.5em; }
-
-  .with-left-padding { padding-left: auto; }
-  .no-left-padding { padding-left: none; }
-  .little-left-padding { padding-left: 0.5em; }
-  .large-left-padding { padding-left: 2.5em; }
-
-  .with-right-padding { padding-right: auto; }
-  .no-right-padding { padding-right: none; }
-  .little-right-padding { padding-right: 0.5em; }
-  .large-right-padding { padding-right: 2.5em; }
-
-  /** Texts *******************************************************************/
 
   .left { text-align: left; }
   .center { text-align: center; }
   .right { text-align: right; }
 
-  .sans { font-family: ui-sans-serif, sans-serif; }
-  .serif { font-family: ui-serif, serif; }
-  .mono { font-family: ui-monospace, monospace; }
-
   .italic { font-style: italic; }
   .normal { font-style: normal; }
 
-  .white { color: rgb(255 248 220); text-decoration-color: rgb(255 248 220); }
-  .black { color: rgb(35 31 32); text-decoration-color: rgb(35 31 32); }
-  .blue { color: rgb(100 148 237); text-decoration-color: rgb(100 148 238); }
-
-  .small { font-size: 0.733em; }
-  .medium { font-size: 0.98em; }
-  .big { font-size: 2.94em; }
-  .huge { font-size: 3.653em; }
-
-  /** Surfaces ****************************************************************/
-
-  .on-white { background-color: rgb(255 248 220); }
-  .on-black { background-color: rgb(35 31 32); }
-  .on-blue { background-color: rgb(100 148 237); }
-
-  .elevated { box-shadow: rgb(209 204 184) 4px 4px 0px 0px; }
-  .bordered {
-     border-style: solid;
-     border-width: thin;
-     border-color: rgb(35 31 32);
-  }
+  .small { font-size: 0.890em;}
 </STYLE>
 </HEAD>
 
-<BODY CLASS="black on-blue left sans medium normal">
-<DIV CLASS="sized with-margin little-padding black on-white elevated bordered">
-  <H1 ID="nico" CLASS="center huge">~NICO</H1>
+<BODY><DIV>
+  <H1 ID="nico">~NICO</H1>
 
   <P>
-  Hey, I want to write cool programs.
-  I'm also available using electronic mails at
-  <CODE CLASS="mono">nico@puffer.fish</CODE>.
-  Please note that I do no longer use PGP or
+  Hey, I want to write cool programs.  I'm also available using electronic mails
+  at <CODE>nico@puffer.fish</CODE>.  Please note that I do no longer use PGP or
   similar technologies for encrypted communication.
   </P>
 
   <P>
-  Everything on this page is my own opinion and
-  may not reflect my employer's.
+  Everything on this page is my own opinion and may not reflect my employer's.
   </P>
 
-  <PRE CLASS="center mono"><CODE>
-   ;,//;,  ,;
-  o:&gt;&gt;::;;/
-&gt;::::&lt;&lt;&lt;;;\
-  ''\\\'" ';
-  </CODE></PRE>
+  <P CLASS="center">&gt;&lt;_&gt;</P>
+
+  <!--------------------------------------------------------------------------!>
 
   <!--------------------------------------------------------------------------!>
 
   <H2 ID="migration-from-nc0fr">Migration from nc0.fr</H2>
+
   <P>
-  <A CLASS="italic" HREF="#migration-from-nc0fr">Jan. 22, 2025</A> &mdash;
-  From now on, everything related to me will be
-  moved towards the <A HREF="http://puffer.fish/~nico">puffer.fish
-  collective</A>, including the <CODE CLASS="mono">n@nc0.fr</CODE>
-  Email address.
-  The older domain will remain online for some
-  times due to legacy systems.
+  <A CLASS="italic" HREF="#migration-from-nc0fr">Jan. 2025</A> &mdash;
+  From now on, everything related to me will be moved towards the
+  <A HREF="http://puffer.fish/~nico">puffer.fish collective</A>, including
+  the <CODE>n@nc0.fr</CODE> Email address.  The older domain will remain
+  online for some times due to legacy systems.
   </P>
 
   <!--------------------------------------------------------------------------!>
 
-  <HR CLASS="bordered">
+  <HR>
   <P CLASS="center small">&copy; 2015-2025. All rights reserved.</P>
-</DIV>
-</BODY>
+</DIV></BODY>
 </HTML>
