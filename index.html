@@ -1,163 +1,293 @@
 <!DOCTYPE html>
 <HTML>
-<!--                                         _
-                                            (_)
-                         ;,//;,  ,;    _ __  _  ___ ___
-                         o:>>::;;/    | '_ \| |/ __/ _ \
-                       >::::<<<;;\    | | | | | (_| (_) |
-                         ''\\\'" ';   |_| |_|_|\___\___/
-
-                          Hey, thank you for exploring
-                      my HTML page on the World Wide Web!
-
-                    If you wants to get in contact with me,
-                      feel free to send an electronic mail
-                              at nico@puffer.fish.
-
-                                     ~nico
-                              Copyright (c) 2015.                            -->
+<!------------------------------------------------------------------------------
+-                                            _                                 -
+-                                           (_)                                -
+-                        ;,//;,  ,;    _ __  _  ___ ___                        -
+-                        o:>>::;;/    | '_ \| |/ __/ _ \                       -
+-                      >::::<<<;;\    | | | | | (_| (_) |                      -
+-                        ''\\\'" ';   |_| |_|_|\___\___/                       -
+-                                                                              -
+-                         Hey, thank you for exploring                         -
+-                     my HTML page on the World Wide Web!                      -
+-                                                                              -
+-                    If you want to get in contact with me,                    -
+-                     feel free to send an electronic mail                     -
+-                             at nico@puffer.fish.                             -
+-                                                                              -
+-                                    ~nico                                     -
+-                           Copyright (c) 2015-2025                            -
+------------------------------------------------------------------------------->
 <HEAD>
-  <TITLE>~nico</TITLE>
-  <META CHARSET="utf-8">
-  <META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
-  <META NAME="author" CONTENT="Nicolas Paul">
-  <META NAME="description" CONTENT="I want to write cool programs.">
+<TITLE>~nico</TITLE>
+<META CHARSET="utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1">
+<META NAME="author" CONTENT="Nicolas Paul">
+<META NAME="description" CONTENT="I want to write cool programs.">
 
-  <META PROPERTY="og:title" CONTENT="~nico">
-  <META PROPERTY="og:type" CONTENT="profile">
-  <META PROPERTY="og:url" CONTENT="http://puffer.fish/~nico">
-  <META PROPERTY="og:description" CONTENT="I want to write cool programs.">
-  <META PROPERTY="og:determiner" CONTENT="">
-  <META PROPERTY="og:locale" CONTENT="en_US">
-  <META PROPERTY="og:site_name" CONTENT="puffer.fish">
-  <META PROPERTY="profile:first_name" CONTENT="Nicolas">
-  <META PROPERTY="profile:last_name" CONTENT="Paul">
-  <META PROPERTY="profile:username" CONTENT="nico">
-  <META PROPERTY="profile:gender" CONTENT="male">
+<META PROPERTY="og:title" CONTENT="~nico">
+<META PROPERTY="og:type" CONTENT="profile">
+<META PROPERTY="og:url" CONTENT="http://puffer.fish/~nico">
+<META PROPERTY="og:description" CONTENT="I want to write cool programs.">
+<META PROPERTY="og:determiner" CONTENT="">
+<META PROPERTY="og:locale" CONTENT="en_US">
+<META PROPERTY="og:site_name" CONTENT="puffer.fish">
+<META PROPERTY="profile:first_name" CONTENT="Nicolas">
+<META PROPERTY="profile:last_name" CONTENT="Paul">
+<META PROPERTY="profile:username" CONTENT="nico">
+<META PROPERTY="profile:gender" CONTENT="male">
 
-  <META NAME="twitter:card" CONTENT="summary">
-  <META NAME="twitter:site" CONTENT="@nc0___">
-  <META NAME="twitter:title" CONTENT="~nico">
-  <META NAME="twitter:description" CONTENT="I want to write cool programs.">
+<META NAME="twitter:card" CONTENT="summary">
+<META NAME="twitter:site" CONTENT="@nc0___">
+<META NAME="twitter:title" CONTENT="~nico">
+<META NAME="twitter:description" CONTENT="I want to write cool programs.">
 
-  <LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
-  <LINK REL="canonical" HREF="http://puffer.fish/~nico">
+<LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
+<LINK REL="canonical" HREF="http://puffer.fish/~nico">
 
-  <STYLE>
-  /*****************************************************************************
-   * nico.css - Copyright (c) 2015.  All rights reserved.                      *
-   ****************************************************************************/
+<STYLE>
+/*******************************************************************************
+* nico.css                                                                     *
+*******************************************************************************/
 
-  HTML {
-    max-width: 33em;
-    margin: auto;
-    background-color: rgb(100 148 237);
-    color: rgb(35 31 32);
-    text-align: left;
-    font-family: ui-sans-serif, sans-serif;
-    font-size: 14pt;
-  }
+BODY {
+  max-width: 60ch;
+  margin: auto;
+  color: rgb(255 255 234);
+  text-decoration-color: rgb(255 255 234);
+  background-color: #2637dd;
+  font-family: ui-monospace, monospace;
+  font-size: 1em;
+}
 
-  BODY > DIV {
-    padding: 0.5em;
-    background-color: rgb(255 248 220);
-    color: rgb(35 31 32);
-    border-style: solid;
-    border-width: thin;
-    border-color: rgb(35 31 32);
-    box-shadow: rgb(209 204 184) 4px 4px 0px 0px;
-  }
+H1 {
+  display: none;
+  text-align: center;
+  font-size: 3.653em;
+}
 
-  H1 {
-    font-size: 3.653em;
-    text-align: center;
-  }
+H2 {
+  text-align: center;
+  font-size: 1.753em;
+}
 
-  H2 {
-    font-size: 1.753em;
-    text-align: center;
-    margin-top: 1em;
-  }
+IMG {
+  width: 100%;
+  height: auto;
+}
 
-  CODE { font-family: ui-monospace, monospace; }
+A, A:visited, A:hover {
+  color: unset;
+  text-decoration-color: unset;
+}
 
-  IMG {
-    width: 100%;
-    height: auto;
-  }
-
-  A, A:visited, A:hover {
-    color: unset;
-    text-decoration-color: unset;
-  }
-
-
-  /*****************************************************************************
-   * Composable CSS                                                            *
-   ****************************************************************************/
-
-  .left { text-align: left; }
-  .center { text-align: center; }
-  .right { text-align: right; }
-
-  .italic { font-style: italic; }
-  .normal { font-style: normal; }
-
-  .small { font-size: 0.890em;}
+CODE {
+  font-family: ui-monospace, monospace;
+}
 </STYLE>
 </HEAD>
 
 <BODY>
-  <DIV>
-  <H1 ID="nico">~NICO</H1>
+<SVG VIEWBOX="0 0 406 89" XMLNS="http://www.w3.org/2000/svg">
+  <PATH D="M85.2315 84.48C80.6235 86.016 77.0395 86.784 74.4795 86.784C71.9195
+  86.784 69.9142 85.8453 68.4635 83.968C67.0128 82.0907 65.6902 78.8907 64.4955
+  74.368C63.3862 69.8453 62.5328 67.584 61.9355 67.584C59.7168 67.584 57.3702
+  70.9973 54.8955 77.824C53.9568 80.384 52.4208 82.7307 50.2875 84.864C48.1542
+  86.9973 45.4662 88.064 42.2235 88.064C39.0662 88.064 36.5915 86.656 34.7995
+  83.84C33.0075 81.024 31.9408 77.952 31.5995 74.624C31.3435 71.296 30.9168
+  68.224 30.3195 65.408C29.7222 62.592 28.7408 61.184 27.3755 61.184C26.4368
+  61.184 25.7542 61.44 25.3275 61.952C24.9008 62.464 24.5168 62.976 24.1755
+  63.488C23.9195 63.9147 23.6208 64.384 23.2795 64.896C23.0235 65.3227 22.6822
+  65.92 22.2555 66.688C21.9142 67.456 21.4875 68.2667 20.9755 69.12C19.2688
+  72.1067 17.9035 74.3253 16.8795 75.776C14.8315 79.0187 11.8022 81.4933 7.7915
+  83.2C6.2555 83.8827 5.01817 84.224 4.0795 84.224C1.5195 84.224 0.239502
+  82.944 0.239502 80.384C0.239502 78.7627 1.60484 77.44 4.3355 76.416C7.06617
+  75.392 8.98617 73.9413 10.0955 72.064C11.2902 70.1013 12.6128 67.8827 14.0635
+  65.408C15.5142 62.9333 16.4955 61.2693 17.0075 60.416C17.6048 59.5627 18.3302
+  58.5387 19.1835 57.344C20.0368 56.064 20.8048 55.2533 21.4875 54.912C23.2795
+  53.9733 25.2422 53.504 27.3755 53.504C30.8742 53.504 33.5195 54.912 35.3115
+  57.728C37.1035 60.544 38.1275 63.616 38.3835 66.944C38.7248 70.272 39.1942
+  73.344 39.7915 76.16C40.3888 78.976 41.3702 80.384 42.7355 80.384C44.1008
+  80.384 45.3808 79.3173 46.5755 77.184C47.8555 75.0507 48.9648 72.704 49.9035
+  70.144C50.8422 67.584 52.3355 65.2373 54.3835 63.104C56.5168 60.9707 59.0342
+  59.904 61.9355 59.904C64.1542 59.904 65.7755 60.4587 66.7995 61.568C67.8235
+  62.592 68.5488 63.4027 68.9755 64C69.4875 64.5973 69.9142 65.4933 70.2555
+  66.688C70.6822 67.8827 70.9808 68.7787 71.1515 69.376C71.3222 69.888 71.5782
+  70.8267 71.9195 72.192C72.9435 76.8853 73.8822 79.1893 74.7355 79.104C76.3568
+  79.104 78.4475 78.6773 81.0075 77.824C83.5675 76.9707 84.9755 76.544 85.2315
+  76.544C87.7915 76.544 89.0715 77.824 89.0715 80.384C89.0715 82.2613 87.7915
+  83.6267 85.2315 84.48Z" FILL="#FFFFEA"/>
+  <PATH D="M107.489 24.576C108.854 24.576 110.262 25.216 111.713 26.496C113.163
+  27.6907 113.889 28.9707 113.889 30.336C113.889 31.616 113.291 32.5973 112.097
+  33.28C110.987 33.9627 109.75 34.304 108.384 34.304C107.019 34.304 105.867
+  33.7067 104.929 32.512C104.075 31.232 103.648 29.8667 103.648 28.416C103.648
+  25.856 104.929 24.576 107.489 24.576ZM95.9685 72.192C91.1898 77.312 86.3258
+  80.9813 81.3765 83.2C79.8405 83.8827 78.6032 84.224 77.6645 84.224C75.1045
+  84.224 73.8245 82.944 73.8245 80.384C73.8245 78.7627 75.1045 77.44 77.6645
+  76.416C79.0298 75.904 80.8218 74.88 83.0405 73.344C85.3445 71.808 86.8805
+  70.656 87.6485 69.888C88.4165 69.12 89.7392 67.712 91.6165 65.664C93.5792
+  63.616 95.1152 62.08 96.2245 61.056C97.3338 59.9467 98.8272 58.8373 100.704
+  57.728C102.667 56.6187 104.459 56.064 106.081 56.064C109.409 56.064 111.968
+  57.2587 113.76 59.648C115.553 62.0373 116.619 64.6827 116.961 67.584C117.899
+  75.264 119.392 79.104 121.44 79.104C123.062 79.104 125.153 78.6773 127.713
+  77.824C130.273 76.9707 131.681 76.544 131.937 76.544C134.497 76.544 135.777
+  77.824 135.777 80.384C135.777 82.2613 134.497 83.6267 131.937 84.48C127.329
+  86.016 123.574 86.784 120.673 86.784C117.857 86.784 115.553 85.5893 113.76
+  83.2C111.968 80.8107 110.902 78.1653 110.561 75.264C109.622 67.584 108.129
+  63.744 106.081 63.744C104.971 63.744 103.691 64.4693 102.241 65.92C100.875
+  67.2853 99.7658 68.3947 98.9125 69.248C98.0592 70.016 97.0778 70.9973 95.9685
+  72.192Z" FILL="#FFFFEA"/>
+  <PATH D="M177.622 77.312C168.833 81.92 157.143 84.224 142.551 84.224C138.881
+  84.224 135.809 83.072 133.335 80.768C130.945 78.3787 129.751 75.7333 129.751
+  72.832C129.751 64.384 133.548 57.1307 141.143 51.072C148.823 45.0133 156.972
+  41.984 165.59 41.984C168.577 41.984 171.649 42.5813 174.807 43.776C178.049
+  44.9707 179.671 46.5067 179.671 48.384C179.671 49.408 179.287 50.304 178.519
+  51.072C177.751 51.84 176.855 52.224 175.831 52.224C174.807 52.224 173.441
+  51.7973 171.734 50.944C170.028 50.0907 167.98 49.664 165.59 49.664C158.934
+  49.664 152.577 52.0107 146.518 56.704C140.46 61.312 137.43 66.6453 137.43
+  72.704C137.43 73.8987 137.9 74.8373 138.839 75.52C139.777 76.2027 141.527
+  76.544 144.087 76.544C146.647 76.544 149.804 76.3733 153.559 76.032C157.313
+  75.6907 161.921 74.752 167.383 73.216C172.844 71.68 176.769 69.7173 179.159
+  67.328C181.548 64.9387 183.425 63.744 184.79 63.744C187.35 63.744 188.63
+  65.024 188.63 67.584C188.63 68.4373 187.99 69.504 186.71 70.784C185.43 72.064
+  184.79 73.1307 184.79 73.984C184.79 78.2507 192.897 80.384 209.111
+  80.384C213.377 80.384 217.431 79.5307 221.271 77.824C225.196 76.1173 227.159
+  73.6427 227.159 70.4C227.159 67.1573 225.793 64.5973 223.062 62.72C220.332
+  60.8427 217.132 59.904 213.462 59.904C212.524 59.904 211.201 60.1173 209.495
+  60.544C207.873 60.9707 206.892 61.184 206.551 61.184C203.991 61.184 202.71
+  59.904 202.71 57.344C202.71 56.064 203.82 54.912 206.038 53.888C208.257
+  52.7787 210.732 52.224 213.462 52.224C220.118 52.224 225.324 54.0587 229.079
+  57.728C232.833 61.3973 234.71 65.8347 234.71 71.04C234.71 76.2453 232.151
+  80.384 227.031 83.456C221.911 86.528 215.937 88.064 209.111 88.064C190.423
+  88.064 179.926 84.48 177.622 77.312Z" FILL="#FFFFEA"/>
+  <PATH D="M277.641 88.064C269.449 88.064 262.579 81.92 257.033 69.632C253.961
+  72.1067 250.078 74.8373 245.385 77.824C240.691 80.8107 237.619 82.6453
+  236.169 83.328C234.718 83.9253 233.523 84.224 232.585 84.224C230.025 84.224
+  228.745 82.944 228.745 80.384C228.745 78.7627 230.025 77.44 232.585
+  76.416C234.035 75.8187 237.065 74.0267 241.673 71.04C246.366 67.968 250.334
+  65.1093 253.577 62.464C251.699 56.32 250.761 49.4933 250.761 41.984C250.761
+  30.6347 252.851 20.8213 257.033 12.544C261.299 4.18133 266.035 0 271.241
+  0C273.459 0 275.379 0.682665 277.001 2.048C278.622 3.41333 279.817 5.12
+  280.585 7.168C282.035 11.0933 282.76 15.36 282.76 19.968C282.76 24.576
+  282.249 29.2693 281.225 34.048C280.201 38.7413 278.963 42.7093 277.513
+  45.952C276.147 49.1947 274.483 52.224 272.521 55.04C269.619 59.2213 266.59
+  62.592 263.432 65.152C268.04 75.3067 272.777 80.384 277.641 80.384C280.969
+  80.384 284.553 79.744 288.393 78.464C292.233 77.184 294.28 76.544 294.536
+  76.544C297.096 76.544 298.376 77.824 298.376 80.384C298.376 82.2613 297.096
+  83.6267 294.536 84.48C287.368 86.8693 281.737 88.064 277.641 88.064ZM271.241
+  7.68C269.79 7.68 267.913 9.472 265.609 13.056C260.83 20.5653 258.441 30.208
+  258.441 41.984C258.441 47.9573 259.081 53.2053 260.361 57.728C263.177 55.0827
+  265.779 51.6693 268.169 47.488C272.777 39.4667 275.081 29.952 275.081
+  18.944C275.081 16.4693 274.739 13.9947 274.057 11.52C273.374 8.96 272.435
+  7.68 271.241 7.68Z" FILL="#FFFFEA"/>
+  <PATH D="M344.901 77.568C344.901 77.568 346.266 77.2267 348.996
+  76.544C351.556 76.544 352.836 77.824 352.836 80.384C352.836 82.2613 351.556
+  83.6267 348.996 84.48C347.46 84.992 345.924 85.248 344.388 85.248C342.938
+  85.248 341.53 84.9067 340.164 84.224C338.799 83.5413 337.733 82.5173 336.965
+  81.152C335.685 78.9333 334.746 76.544 334.148 73.984L333.637 71.808C332.186
+  74.2827 328.645 77.184 323.013 80.512C317.466 83.84 311.535 85.504 305.22
+  85.504C301.807 85.504 298.82 84.224 296.26 81.664C293.7 79.104 292.421
+  76.1173 292.421 72.704C292.421 64.4267 295.834 57.2587 302.66 51.2C309.487
+  45.056 316.399 41.984 323.396 41.984C327.236 41.984 330.522 42.7093 333.253
+  44.16C336.069 45.5253 337.477 46.9333 337.477 48.384C337.477 50.944 336.197
+  52.224 333.637 52.224C333.125 52.224 331.887 51.7973 329.924 50.944C327.962
+  50.0907 325.786 49.664 323.396 49.664C318.788 49.664 313.754 51.9253 308.293
+  56.448C302.831 60.8853 300.1 66.304 300.1 72.704C300.1 73.984 300.613 75.1787
+  301.637 76.288C302.746 77.312 303.94 77.824 305.22 77.824C310.255 77.824
+  314.949 76.5013 319.301 73.856C323.653 71.1253 326.426 68.9067 327.621
+  67.2C328.815 65.408 329.797 63.7867 330.565 62.336C331.333 60.8853 331.887
+  59.9467 332.228 59.52C332.655 59.008 333.509 58.752 334.789 58.752C336.069
+  58.752 337.05 59.2213 337.733 60.16C338.415 61.0987 339.055 62.592 339.652
+  64.64C340.25 66.6027 340.847 68.8213 341.444 71.296C342.042 73.7707 342.554
+  75.4347 342.98 76.288C343.492 77.1413 344.133 77.568 344.901 77.568Z"
+  FILL="#FFFFEA"/>
+  <PATH D="M341.504 76.416C346.112 74.5387 349.739 72.576 352.384 70.528C355.03
+  68.3947 358.272 65.3227 362.112 61.312C365.952 57.3013 368.47 54.784 369.664
+  53.76C373.76 50.176 378.112 48.384 382.72 48.384C385.536 48.384 388.608
+  49.0667 391.936 50.432C395.35 51.7973 398.507 54.2293 401.408 57.728C404.31
+  61.2267 405.76 65.408 405.76 70.272C405.76 75.0507 402.944 79.232 397.312
+  82.816C391.681 86.3147 384.256 88.064 375.04 88.064C372.48 88.064 371.201
+  86.784 371.201 84.224C371.201 81.664 372.48 80.384 375.04 80.384C382.038
+  80.384 387.627 79.2747 391.809 77.056C395.99 74.752 398.081 72.448 398.081
+  70.144C398.081 66.9867 397.056 64.256 395.008 61.952C391.424 58.0267 387.328
+  56.064 382.72 56.064C380.075 56.064 377.472 57.1733 374.912 59.392C374.144
+  60.0747 371.67 62.5493 367.488 66.816C363.392 71.0827 359.979 74.2827 357.249
+  76.416C354.603 78.5493 351.531 80.384 348.033 81.92C344.619 83.456 342.443
+  84.224 341.504 84.224C338.944 84.224 337.664 82.944 337.664 80.384C337.664
+  78.7627 338.944 77.44 341.504 76.416Z" FILL="#FFFFEA"/>
+</SVG>
 
-  <P>
-  Hey, I want to write cool programs.  I'm also available using electronic mails
-  at <CODE>nico@puffer.fish</CODE>.  Please note that I do no longer use PGP or
-  similar technologies for encrypted communication.
-  </P>
+<H1 ID="nico">NICOLAS</H1>
 
-  <P>
-  Stuff I consider fundamental:
-  <A HREF="./notation.pdf">notation.pdf</A>,
-  <A HREF="./relational.pdf">relational.pdf</A>,
-  <A HREF="./reliable.pdf">reliable.pdf</A>,
-  <A HREF="./entscheidungsproblem.pdf">entscheidungsproblem.pdf</A>,
-  <A HREF="./pol.pdf">pol.pdf</A>, and
-  <A HREF="./literate.pdf">literate.pdf</A>.
-  </P>
+<P>
+&copy; 2015-2025
+&gt;&lt;_&gt;
+<CODE>nico@puffer.fish</CODE>
+</P>
 
-  <P>
-  Everything on this page is my own opinion and may not reflect my employer's.
-  </P>
+<!----------------------------------------------------------------------------->
 
-  <P CLASS="center">&gt;&lt;_&gt;</P>
+<!-- TODO(nico): article on data-first, making code close to data, not data
+     close to code, SpacetimeDB, Record vs Activities
+     (https://forum.malleable.systems/t/objects-as-records-vs-activities/273)
+     and if it's like Blockchain smart contracts and COBOL on Big Iron
+     machines! -->
 
-  <!--------------------------------------------------------------------------!>
+<!-- TODO(nico): article on the importance of liveness, instant reactivity,
+     REPL, and how to achieve it. -->
 
-  <!--------------------------------------------------------------------------!>
+<!-- TODO(nico): article on failure as a natural property of systems, failure,
+     supervision, and recovery. -->
 
-  <H2 ID="migration-from-nc0fr">Migration from nc0.fr</H2>
+<!-- TODO(nico): article of modability and malleable software, also Xerox
+     EuroPARC Buttons (https://dl.acm.org/doi/pdf/10.1145/97243.97271) but also
+     Marx's allienatd work, in which someone is more proud of his work and
+     himself if the work he produces keeps a part of him. -->
 
-  <P>
-  <A CLASS="italic" HREF="#migration-from-nc0fr">Jan. 2025</A> &mdash;
-  From now on, everything related to me will be moved towards the
-  <A HREF="http://puffer.fish/~nico">puffer.fish collective</A>, including
-  the <CODE>n@nc0.fr</CODE> Email address.  The older domain will remain
-  online for some times due to legacy systems.
-  </P>
+<!----------------------------------------------------------------------------->
 
-  <!--------------------------------------------------------------------------!>
+<H2 ID="2">{us,modd,design}ers</H2>
 
-  <HR>
-  <P CLASS="center small">&copy; 2015-2025. All rights reserved.</P>
-  </DIV>
+<P>
+<A HREF="#2">May 2025</A> &mdash;  We can classify the
+people interacting with a system in three groups.  No group
+is better than another one and we constantly change group.
+</P>
 
-  <SCRIPT>
-  /*****************************************************************************
-   * nico.js - Copyright (c) 2015.  All rights reserved.                       *
-   ****************************************************************************/
+<OL>
+<LI>
+Users act upon the system to achieve their goal, reliably,
+without too much thinking.  They know only what they do not
+like, which includes stupid defaults, invalid documentation,
+and tasks that could be automated.  Give them play dough,
+not diamand.
+</LI>
 
-  </SCRIPT>
+<LI>
+Modders make the system do actions its creators haven't
+thought of, using only the system's primitives.  It is an
+artistic expression which is helped by easy to use and
+malleable primitives and without aggressive licensing.
+</LI>
+
+<LI>
+Designers create a system from the system, modifying its
+outsides, providing new primitives.  They design a system,
+and they do it best with access to the blueprints.
+</LI>
+</OL>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="1">Migration from nc0.fr</H2>
+
+<P>
+<A HREF="#1">Jan. 2025</A> &mdash;  From now on,
+everything related to me will be moved towards the
+puffer.fish collective, including the
+<CODE>n@nc0.fr</CODE> electronic mail address.
+The older domain will remain online for some times due to
+legacy systems.
+</P>
 </BODY>
 </HTML>
