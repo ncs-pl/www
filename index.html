@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<HTML>
+<!------------------------------------------------------------------------------
+-                                                                              -
+-                                            _                                 -
+-                                           (_)                                -
+-                        ;,//;,  ,;    _ __  _  ___ ___                        -
+-                        o:>>::;;/    | '_ \| |/ __/ _ \                       -
+-                      >::::<<<;;\    | | | | | (_| (_) |                      -
+-                        ''\\\'" ';   |_| |_|_|\___\___/                       -
+-                                                                              -
+-                         Hey, thank you for exploring                         -
+-                     my HTML page on the World Wide Web!                      -
+-                                                                              -
+-                    If you want to get in contact with me,                    -
+-                     feel free to send an electronic mail                     -
+-                                 at n@nc0.fr.                                 -
+-                                                                              -
+-                                    ~nico                                     -
+-                           Copyright (c) 2015-2025                            -
+-                                                                              -
+------------------------------------------------------------------------------->
+<HEAD>
+<TITLE>nc0</TITLE>
+<META CHARSET="utf-8">
+
+<META NAME="viewport"    CONTENT="width=device-width, initial-scale=1">
+<META NAME="author"      CONTENT="Nicolas Paul">
+<META NAME="description" CONTENT="><_>">
+
+<LINK REL="me"        HREF="https://mastodon.puffer.fish/@nico">
+<LINK REL="canonical" HREF="http://nc0.fr">
+
+<STYLE>
+BODY {
+  max-width: 46ch;
+  padding: 0.6em;
+  margin: auto;
+  background-color: #f8ede3;
+  color: #4f1c26;
+  font-size: 14pt;
+  font-family: ui-serif, serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: -1.3%;
+  text-align: justify;
+}
+A, A:HOVER, A:VISITED { color: #ca244d; }
+H1 { text-align: center; font-weight: black; }
+H2 { margin-top: 1.9em; font-weight: black; text-align: center; }
+OL { list-style-type: lower-roman; list-style-position: outside; }
+BLOCKQUOTE { font-style: italic; margin: 1.5em; }
+::SELECTION { background-color: #ffbdca; }
+</STYLE>
+</HEAD>
+
+<!----------------------------------------------------------------------------->
+
+<BODY>
+<H1 ID="nico">N@NC0.FR</H1>
+
+<P>
+A list of my projects:
+<A HREF="./vim">VIM configuration</A>,
+<A HREF="http://puffer.fish/">puffer.fish</A>,
+(TODO).
+Below are some notes I had taken. <STRONG>They probably are wrong, incomplete,
+and idealistic</STRONG>.  Click on the date to get a permanent link.
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<!--
+  TODO:
+  - blog on top-down > bottom-up
+  - blog on problem oriented languages
+  - blog on the importance of notation and tersness
+  - blog on simplicity
+  - blog on ways to design a simple file format/protocol
+  - blog on recreative programming
+  - blog on the importance of livecoding for reactive programs
+  - blog on malleable software
+  - blog on self-contained
+  - blog on naming things
+  - blog on preserving our softwares for long?
+-->
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="5">Hey, go put a nice art at the top of your source files</H2>
+
+<P>
+<A HREF="#5">May 2025</A> &mdash;  A popular practice in the demoscene and the
+ancient warez culture was to have some cool ASCII art in README or DESCRIPTION
+files.  Some have continued such a tradition in their code files, next to the
+copyright notice, author information, date...  But I would love to get more of
+them, hence please, consider doing so!
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="4">Keeping everything in one big monolithic repository</H2>
+
+<P>
+<A HREF="#4">May 2025</A> &mdash;  I like to have everything related to a
+project available in the same place, for offline use.  This includes the code
+with the dependencies vendored, the tools and scripts, the documentation, the
+bugs and reports, the artistic assets, as well as the build artifacts.  It gives
+me flexibility and uniformity during the creation and maintenance process.
+</P>
+
+<P>
+I know however that this is not a commonly agreed upon decision, mainly due to
+the use of inapt systems, such as Git for centralised programming.  I feel like
+people should explore other tools to find their needs, because Git is such a
+bad tool for most use-cases in general, and yet everyone requires it...
+</P>
+
+<P>
+That's why if I can get away with it, I simply store everything in a directory
+on my local computer, sometimes I do backups and archives on external drives
+and cloud storages.  If I can't, then I try to use
+<A HREF="https://ark-vcs.com/">Ark</A> or Perforce Helix, the former being
+my favorite.
+</P>
+
+<P>
+But really, consider keeping everything in one big directory first, and using
+better suited tools than Git for your centralised engineering, it is criminally
+underappreciated.  Not that I dislike Git itself.
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="3">Levelled programming</H2>
+
+<P>
+<A HREF="#3">May 2025</A> &mdash;  The computer programming world is too often
+segregated into a higher and a lower level depending on the distance between
+the programmer and the hardware.  People even try to define programming
+languages using these levels. Wikipedia has even invented a concept of
+<A HREF="https://en.wikipedia.org/wiki/Programming_language_generations">
+programming language generations</A>?!
+</P>
+
+<P>
+I find these definitions to be nonsensical and disconnected by giving to much
+attention to irrelevant details: are machine codes high-level because most
+processors have been micro-coded since the '60s?  Instead, I'd like to present
+a new definition centered around systems and its <A HREF="#1">users</A>.
+</P>
+
+<P>
+On one hand, I believe high-level programming refers to playing in the abstract
+world of the system, from its user interface to its database.  It is the place
+where we define a set of abstraction primitives and builds upon it.
+On the other hand, low-level is the driver code, the glue code, the part of the
+system which is invisible yet is the most important.  It is the implementation
+of the defined primitive abtractions on the targetted platform
+</P>
+
+<P>
+Therefore, the goal is to find the right set of abstractions we want to use
+(no more, no less), and implement it, while also constructing the system.
+Be wary to not make your higher levels depend too much on the lower level,
+instead prefer the inverse, to keep control of your entire system.
+</P>
+<!-- TODO(nc0): link to blog on minimising dependencies, simplicity, and
+                top-down/stepwise architecture -->
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="2">Compositional user interfaces</H2>
+
+<P>
+<A HREF="#2">May 2025</A> &mdash;  One thing that I particularly enjoy is the
+composability of a user interface's actions.  Something similar to Vim verbs,
+or PostScript concatenation notation.  I find a certain joy in it, and others
+does too given the existence of code golfing.
+</P>
+
+<P>
+Composition is not primitive key-bindings, it's about having a language and
+writing sentences with it.  You have a central data-structure and hundred of
+words to act upon it.  Academics often talk about expressing the data flow.
+</P>
+
+<P>
+And this is well represented with tools like Vim (motions operating on the text
+objects), the UNIX shell and its pipes (chaining commands operating on raw
+textual streams), Forth systems (highly-refactored and minimal words operating
+on two stacks), and APL (transparent polymorphism and terse infix notation to
+express mathematical expressions with joy).  UNIX hackers shall remember
+<A HREF="http://www.catb.org/esr/writings/unix-koans/ten-thousand.html"i>Master
+Foo's quote</A>:
+</P>
+
+<BLOCKQUOTE>
+There is more Unix-nature in one line of shell script than there is
+in ten thousand lines of C.
+</BLOCKQUOTE>
+
+<P>
+Don't get fooled by the examples being mostly textual, this composition can also
+be found in more visual and abstract mediums too: mixing colours in order to get
+a new one, smashing waveforms together to make music, or sending messages to
+objects à la Smalltalk!  It's just a matter of creativity after all...
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="1">The users, the modders, and the hackers</H2>
+
+<P>
+<A HREF="#1">May 2025</A> &mdash;  I typically classify the people interacting
+with a system in three groups in order to better understand their needs and
+expectations.  I do not consider any group to be better than another one,
+especially since we often go from one group to another.
+</P>
+
+<P>
+Firstly, there are the users, the ones acting upon the system in order to
+achieve their goal without too much consideration.  They benefit from smart
+defaults and fast interfaces.
+</P>
+<!-- TODO(nc0): link to the blog on smart defaults -->
+
+<P>
+Then comes the modders, the creatives making the system do anything they want
+from its primitives only.  They <A HREF="#2">compose and mix stuff altogether
+to create a dish they'll love</A>.  And as we all know, a dish is better when
+it doesn't come with an aggressive licensing model :)
+</P>
+<!-- TODO(nc0): link to the blog on great license -->
+
+<P>
+And finally its the hackers, the people directly delving into the system's
+architecture and <A HREF="#3">low-level aspects</A>.  They don't simply
+combine primitives, they create the primitives.
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="0">Hello</H2>
+
+<P>
+<A HREF="#1">Jan. 2025</A> &mdash;  Hello, world!
+</P>
+
+<!----------------------------------------------------------------------------->
+</BODY>
+</HTML>
