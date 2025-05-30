@@ -72,18 +72,166 @@ and idealistic</STRONG>.  Click on the date to get a permanent link.
 
 <!--
   TODO:
-  - blog on top-down > bottom-up
-  - blog on problem oriented languages
-  - blog on the importance of notation and tersness
-  - blog on simplicity
   - blog on ways to design a simple file format/protocol
   - blog on recreative programming
-  - blog on the importance of livecoding for reactive programs
   - blog on malleable software
-  - blog on self-contained
-  - blog on naming things
   - blog on preserving our softwares for long?
+  - blog on smart defaults
+  - blog on cool license
+  - blog on making an auth system inspired by blockchain wallets and Mullvad
 -->
+<!-- TODO(nc0): blog on naming things -->
+<!-- TODO(nc0): blog on failure -->
+<!-- TODO(nc0): blog on top-down over bottom-up -->
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="10">Playful playing experience</H2>
+
+<P>
+<A HREF="#10">May 2025</A> &mdash;  Live coding is the practice of playing
+with a programmable software in real-time, often in front of an audience.
+Whether it is instantly modifying computer graphics, hot-reloading during Web
+development, listening to music while it is being composed, or recompiling a
+module in production on the Erlang virtual machine, live coding properties
+are a great way to improve the crafting process and make using a computer
+system more enjoyable.
+</P>
+
+<P>
+I believe that a software should offer both batch processing and reactive live
+coding, as the reactive part mainly is a loop which calls the <A HREF="#6">
+batch processing</A> at certain intervals if possible.  This is great for
+testing and scripting too.
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="9">My own, your own, their own</H2>
+
+<P>
+<A HREF="#9">May 2025</A> &mdash;  When thinking about <A HREF="#3">levels</A>
+in the programming culture, I concluded by saying that it is a matter of
+defining the primitives we want to build our system upon, and trying to
+implement them in the targetted platform's programming system.  Yet, this is a
+practice that is rarely done, as most people instead depends on external
+primitives that are out of their control, which ultimately leads to
+<A HREF="#7">complexity in the long run</A>.
+</P>
+
+<P>
+Such an issue is mainly caused by failing to recognise and understand our
+dependencies, especially the most important ones: the operating system and its
+drivers, the programming language and its runtime, and the translation system
+(compiler or interpreter).  These define a lot of primitives which we should be
+careful of using everywhere.  Instead, we should limit our dependencies on them
+by only relying on those to implement our high-level primitives!
+</P>
+
+<P>
+Our system (implemented in the high-level primitives) must stay in control,
+calling the low-level implementations as dependencies, not the inverse.  And to
+do so, the high-level primitives should be imperative not declarative.  I should
+be able to say where, what, and how to draw on the screen.  The low-level system
+would just give me the screen.  This idea also reduces the total amount of code
+existing on all layers of the stack: I implement what I need to draw while the
+underlying platform provides me the simplest memory buffer possible without
+having to create complex and generic algorithms to fit the needs of everyone
+(which is currently what is happening with CSS and the likes).
+</P>
+
+<P>
+Additionally, this simplifies the preservation of the system in the long run
+too, as targetting a new platform is simply a matter of me implementing my
+own high-level primitives using the new platform's features, instead of having
+to recreate all the algorithms on this new platform and then fixing all the
+declarative issues and bug since all platforms aren't perfect.
+Think PostScript, not HTML.
+</P>
+
+<P>
+And some may think that it is a hard task, but you could use some third-party
+library that does it for you, as long as you can control it (everything in the
+user-space, no OS drivers).  The same goes for favouring a declarative
+paradigm: nothing stops you from building a declarative macro system atop your
+imperative primitives, as Lispers have been doing for ages.  As long as you
+retain control on the stack.
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="8">Denotation of the problem</H2>
+
+<P>
+<A HREF="#8">May 2025</A> &mdash;  Languages are important in our day-to-day
+lives since they allow us to express and share our thoughts.  Kenneth E. Iverson
+even won a Turing award talking about it.  In his paper, he presents five
+criterias to judge a notation: how easy it is to express the constructs arising
+from a problem, how much suggestive it is, how much importance does it give to
+irrelevant details, is it economic, and whether or not it helps with writing
+formal proofs.
+</P>
+
+<P>
+While I do not believe in all of the five points, I think notation is a major
+part of our languages that lacks research.  We often limit the discussions
+around a language having prefix, infix, or postfix notation, but never do we go
+further: how much adaptations should a <A HREF="#1">programmer</A> have to do in
+order to interact with a computer?
+</P>
+
+<P>
+And this is the abstract place where the <A HREF="#3">language semantics are
+relevant</A>, especially whether or not you will reformulate the problem to
+map well with the language, or try to shape the language to solve the problem.
+<P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="7">The fight for simplicity</H2>
+
+<P>
+<A HREF="#7">May 2025</A> &mdash;  Rarely do you not hear about simplicity.
+Everyone is claiming their solution to be simple, yet it's another Rube Goldberg
+machine.  So here's my participation in trying to understand the concept of
+simplicity: simplicity is an organic solution given a constrained environment.
+</P>
+
+<P>
+Simplicity is not about beauty but being useful: the elegance of a system relies
+in its simplicity, not the inverse.  Simplicity is not about size: a reliable
+air traffic controller is not a web server despite both being programs.
+Simplicity is not inherited: complexity is natural, simplicity isn't, you must
+confront it.  Simplicity is not about naivety: you are naive until you know
+better.  Don't solve a problem you don't have yet, but when you have it,
+don't go around it.
+</P>
+
+<P>
+But if simplicity is hard to achieve, it is still a goal to strive for as it
+offers easier maintainability, evolution, onboarding, and flexibility when the
+specification isn't complete.  It's a long fight, but a fair one.
+</P>
+
+<!----------------------------------------------------------------------------->
+
+<H2 ID="6">You interact with a compiler in order to update a database</H2>
+
+<P>
+<A HREF="#6">May 2025</A> &mdash;  Algorithms + Data Structures = Programs; or
+at least this is Niklaus Wirth's assertion, one he strongly believes in up to
+being the eponym of his book.  And I definitely agree with him, not that I would
+argue against him in the first place.
+</P>
+
+<P>
+In fact, I'll go further and say that a system is an interface to represent and
+act upon records of data.  Think of the interface as a compiler (algorithms),
+and the records as a database (data structures).  Mathematicians may even think
+in terms of categories and functors.  Therefore, when designing a
+system, <A HREF="#3">you have to decide</A> about the notation it offers and
+the data which defines it.
+</P>
 
 <!----------------------------------------------------------------------------->
 
@@ -93,8 +241,8 @@ and idealistic</STRONG>.  Click on the date to get a permanent link.
 <A HREF="#5">May 2025</A> &mdash;  A popular practice in the demoscene and the
 ancient warez culture was to have some cool ASCII art in README or DESCRIPTION
 files.  Some have continued such a tradition in their code files, next to the
-copyright notice, author information, date...  But I would love to get more of
-them, hence please, consider doing so!
+copyright notice and file information.  But I would love to see more of them, so
+please consider doing so!
 </P>
 
 <!----------------------------------------------------------------------------->
@@ -119,9 +267,8 @@ bad tool for most use-cases in general, and yet everyone requires it...
 <P>
 That's why if I can get away with it, I simply store everything in a directory
 on my local computer, sometimes I do backups and archives on external drives
-and cloud storages.  If I can't, then I try to use
-<A HREF="https://ark-vcs.com/">Ark</A> or Perforce Helix, the former being
-my favorite.
+and cloud storages.  If I can't, then I try to use Ark VCS or Perforce Helix,
+the former being my favorite.
 </P>
 
 <P>
@@ -139,8 +286,7 @@ underappreciated.  Not that I dislike Git itself.
 segregated into a higher and a lower level depending on the distance between
 the programmer and the hardware.  People even try to define programming
 languages using these levels. Wikipedia has even invented a concept of
-<A HREF="https://en.wikipedia.org/wiki/Programming_language_generations">
-programming language generations</A>?!
+programming language generations?!
 </P>
 
 <P>
@@ -152,21 +298,20 @@ a new definition centered around systems and its <A HREF="#1">users</A>.
 
 <P>
 On one hand, I believe high-level programming refers to playing in the abstract
-world of the system, from its user interface to its database.  It is the place
-where we define a set of abstraction primitives and builds upon it.
-On the other hand, low-level is the driver code, the glue code, the part of the
-system which is invisible yet is the most important.  It is the implementation
-of the defined primitive abtractions on the targetted platform
+world of the system, from its user interface to its <A HREF="#6">database</A>.
+It is the place where we define a set of abstraction primitives and builds upon
+it.  On the other hand, low-level is the driver code, the glue code, the part of
+the system which is invisible yet is the most important.  It is the
+implementation of the defined primitive abtractions on the targetted platforms.
 </P>
 
 <P>
 Therefore, the goal is to find the right set of abstractions we want to use
 (no more, no less), and implement it, while also constructing the system.
 Be wary to not make your higher levels depend too much on the lower level,
-instead prefer the inverse, to keep control of your entire system.
+instead prefer the inverse, to <A HREF="#9">keep control over your entire
+system</A>.
 </P>
-<!-- TODO(nc0): link to blog on minimising dependencies, simplicity, and
-                top-down/stepwise architecture -->
 
 <!----------------------------------------------------------------------------->
 
@@ -190,15 +335,10 @@ And this is well represented with tools like Vim (motions operating on the text
 objects), the UNIX shell and its pipes (chaining commands operating on raw
 textual streams), Forth systems (highly-refactored and minimal words operating
 on two stacks), and APL (transparent polymorphism and terse infix notation to
-express mathematical expressions with joy).  UNIX hackers shall remember
-<A HREF="http://www.catb.org/esr/writings/unix-koans/ten-thousand.html"i>Master
-Foo's quote</A>:
+express mathematical expressions with joy).  UNIX hackers shall remember Master
+Foo's quote: "There is more Unix-nature in one line of shell script than there
+is in ten thousand lines of C."
 </P>
-
-<BLOCKQUOTE>
-There is more Unix-nature in one line of shell script than there is
-in ten thousand lines of C.
-</BLOCKQUOTE>
 
 <P>
 Don't get fooled by the examples being mostly textual, this composition can also
@@ -209,7 +349,7 @@ objects à la Smalltalk!  It's just a matter of creativity after all...
 
 <!----------------------------------------------------------------------------->
 
-<H2 ID="1">The users, the modders, and the hackers</H2>
+<H2 ID="1">{Us,modd,hack}ers</H2>
 
 <P>
 <A HREF="#1">May 2025</A> &mdash;  I typically classify the people interacting
