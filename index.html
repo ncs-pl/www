@@ -16,10 +16,13 @@
       font-style: normal;
     }
 
-    DIV#content {
+    DIV.content {
       max-width: 43ch;
       height: fit-content;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0.7em;
+      margin-bottom: 1.3em;
       border-style: solid;
       border-width: 2px;
       border-color: rgb(10 11 15);
@@ -105,35 +108,36 @@
 
     .footer {
       text-align: center;
-      margin-top: 1.3em;
+      margin-top: 0.04em;
       margin-bottom: 0.04em;
     }
     </STYLE>
 </HEAD>
 <BODY>
-  <DIV ID="content">
-  <H1 ID="nico">nico</H1>
+  <DIV CLASS="content">
+    <H1 ID="nico">nico</H1>
 
-  <UL CLASS="nav">
-    <LI CLASS="navbutton">
-      <A HREF="mailto:nico@puffer.fish">Email</A>
-    </LI>
-    <LI CLASS="navbutton">
-      <A HREF="https://mastodon.puffer.fish/@nico">Mastodon</A>
-    </LI>
-    <LI CLASS="navbutton">
-      <A HREF="https://forgejo.puffer.fish/nico">Code</A>
-    </LI>
-  </UL>
+    <P>
+      Hi, my name is Nicolas and I try to write recreative computer
+      programs for fun and non-profits, all of which I sometimes
+      write below.  Tip: click on the entry date to obtain the URL
+      to it!
+    </P>
 
-  <P>
-  Hi, my name is Nicolas and I try to write recreative computer
-  programs for fun and non-profits, all of which I sometimes
-  write below.  Tip: click on the entry date to obtain the URL
-  to it!
-  </P>
-
-  <P CLASS="footer">&copy; 2025 ~nico</P>
+    <UL CLASS="nav">
+      <LI CLASS="navbutton">
+        <A HREF="mailto:nico@puffer.fish">Email</A>
+      </LI>
+      <LI CLASS="navbutton">
+        <A HREF="https://mastodon.puffer.fish/@nico">Mastodon</A>
+      </LI>
+      <LI CLASS="navbutton">
+        <A HREF="https://forgejo.puffer.fish/nico">Code</A>
+      </LI>
+    </UL>
+  </DIV>
+  <DIV CLASS="content">
+    <P CLASS="footer">&copy; 2025 ~nico</P>
   </DIV>
 </BODY>
 </HTML>
