@@ -3,141 +3,53 @@
        prefers ASCII. Contact me at nico@puffer.fish. -->
   <HEAD>
     <META CHARSET="utf-8">
-    <TITLE>nc0</TITLE>
+    <TITLE>~nico</TITLE>
     <LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
     <STYLE>
     BODY {
-      background-color: rgb(236 100 88);
-      color: rgb(10 11 15);
-      text-align: justify;
-      font-family: ui-sans-serif, sans-serif;
-      font-size: 16pt;
-      font-width: 400;
-      font-style: normal;
-    }
-
-    DIV.content {
-      max-width: 43ch;
-      height: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0.7em;
-      margin-bottom: 1.3em;
-      border-style: solid;
-      border-width: 2px;
-      border-color: rgb(10 11 15);
+      height: 100vh;
+      width: 100vw;
+      margin: auto;
       padding: 0.67em;
-      background-color: rgb(246 234 220);
-      box-shadow: 5px 9px rgb(145 56 48);
+      background-color: rgb(30 105 64);
+      color: rgb(246 234 220);
+      font-style: normal;
+      font-weight: 400;
+      font-family: ui-sans-serif, sans-serif;
+      font-size: 13pt;
+      text-align: left;
+      column-width: 27ch;
+      column-count: 3;
+      column-fill: auto;
+      column-gap: 6ch;
+      column-rule-style: none;
     }
 
-    H1 {
-      text-align: center;
-      color: rgb(30 105 64);
-      margin-top: 0.04em;
-      margin-bottom: 0.27em;
-      font-size: 33pt;
+    H1, H2 {
+      text-align: left;
+      font-size: 19pt;
       font-weight: 900;
     }
 
-    H2 {
-      text-align: center;
-      color: rgb(30 105 64);
-      margin-top: 0.27em;
-      margin-bottom: 0.27em;
-      font-size: 24pt;
-      font-weight: 700;
-    }
-
-    A, A:visited {
-      color: rgb(10 11 15);
-      text-decoration: underline;
-      font-style: italic;
-    }
-    A:hover {
-      background-color: rgb(10 11 15);
-      color: rgb(246 234 220);
-      font-style: italic;
-    }
-
-    CODE {
-      font-family: ui-monospace, monospace;
-      font-size: 15pt;
-    }
-
-    .nav {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 0.55em;
-      justify-content: center;
-    }
-
-    .navbutton {
-      display: inline;
-      padding-left: 0.7em;
-      padding-right: 0.7em;
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
-      background-color: rgb(30 105 64);
-      border-style: solid;
-      border-width: 2px;
-      border-color: rgb(10 11 15);
-      text-align: footer;
-      box-shadow: 2px 3px rgb(181 173 165);
-    }
-    .navbutton:hover {
-      display: inline;
-      padding-left: 0.7em;
-      padding-right: 0.7em;
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
-      background-color: rgb(10 11 15);
-      border-style: solid;
-      border-width: 2px;
-      border-color: rgb(10 11 15);
-      box-shadow: 2px 3px rgb(181 173 165);
-    }
-    .navbutton A, .navbutton A:hover {
-      color: rgb(246 234 220);
-      text-transform: uppercase;
-      text-decoration: none;
-      font-style: normal;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 0.04em;
-      margin-bottom: 0.04em;
-    }
+    A, A:visited, A:hover { color: unset; text-decoration: underline; }
+    CODE { font-family: ui-monospace, monospace; font-size: 13pt; }
+    STRONG { font-weight: 600; }
+    EM { font-style: italic; }
     </STYLE>
-</HEAD>
-<BODY>
-  <DIV CLASS="content">
-    <H1 ID="nico">nico</H1>
+  </HEAD>
+  <BODY>
+    <H1>Nicolas on the World Wide Web!</H1>
 
     <P>
       Hi, my name is Nicolas and I try to write recreative computer
       programs for fun and non-profits, all of which I sometimes
-      write below.  Tip: click on the entry date to obtain the URL
-      to it!
+      write below.  &copy; 2015-2025.
     </P>
 
-    <UL CLASS="nav">
-      <LI CLASS="navbutton">
-        <A HREF="mailto:nico@puffer.fish">Email</A>
-      </LI>
-      <LI CLASS="navbutton">
-        <A HREF="https://mastodon.puffer.fish/@nico">Mastodon</A>
-      </LI>
-      <LI CLASS="navbutton">
-        <A HREF="https://forgejo.puffer.fish/nico">Code</A>
-      </LI>
-    </UL>
-  </DIV>
-  <DIV CLASS="content">
-    <P CLASS="footer">&copy; 2025 ~nico</P>
-  </DIV>
-</BODY>
+    <P>
+      You can contact me via electronic mailing at <CODE>nico@puffer.fish</A>
+      and Mastodon at <CODE>@nico@puffer.fish</CODE>.  Some code of mine are
+      available on-line.
+    </P>
+  </BODY>
 </HTML>
