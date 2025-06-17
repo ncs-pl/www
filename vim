@@ -1,45 +1,17 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                                                              "
-"                     VIM configuration for recreation.                        "
-"                              nico@puffer.fish                                "
-"                                                                              "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"$$$$$$$$            |                                  |                      "
-"$$$$$$              |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|               #      "
-"$$$$$               |   The Fall of the Emacs Church   |      ^  ^    ##      "
-"$$$                 :~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~:        ^  # ###   ___"
-"             .                           @    @            ^^     # ####  /==="
-"             |\       @   @@             @@  @@@ @  +   @@      ### #### _|:_:"
-"  _--^^...~~~~ ``\\   @@   @@               @@@  @@ A    @@    ##### |# _/::::"
-"_/      ___-_   {*} >\ @@      @@@  __            @@ \__  @   #####  |/:::::::"
-"     /^^     ///_;---'   @   @@@@  /==\         @@@@@'-/\      #|#  /:::::::::"
-"    |\_        \_\ @@@@       @@@@_|[]|_   ^   _|\@@@| ||_ @@   | _/::::::::::"
-" >> |-\             @@@@@  __/|[]/::::::\     /\_/==@@=\_/\@@@@ |/:::::::___::"
-"<<^  |-|             @@@@@@@==|[/:::::::::\  _|:_:_[I]_:_:|_@@@/::::::::/:::\_"
-">^^   |--|~~~~  ~   @@@@@@@@]_|/:::::::::::\/:::::::::::::::\@/::::::__/::::::"
-"  >^> |--|~~~~~~~~~~~~~_@@@@/::::::::::::_/:::::::::::::::::::\=::::/:::::::::"
-"<     |-|~~~~~~~~~~~~~/:::::::::::::::::/:::::::::::::::::::::::\::/:::::~nc0:"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ~nico's Vi IMproved configuration, <nico@puffer.fish>
 
-set nocompatible
-filetype plugin indent on
-syntax on
-
+set nocompatible noerrorbells novisualbell nofoldenable noswapfile noundofile
 set autoindent wrap ruler nocursorline
-set backspace=indent,eol,start
-set expandtab shiftwidth=2 tabstop=2
+set noexpandtab backspace=indent,eol,start
 set hlsearch incsearch ignorecase smartcase
 set splitbelow splitright hidden
 set timeoutlen=100 ttimeout notimeout
 set wildmenu wildmode=longest:full,full
 set clipboard=unnamed mouse=a
-set noerrorbells novisualbell nofoldenable
-set noswapfile noundofile
 set list listchars=tab:\ \ ,trail:·,nbsp:␣
+set notermguicolors background=dark
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-nnoremap <Esc> <Cmd>nohl<CR>
+nnoremap <Esc><Esc> <Cmd>nohl<CR>
 nnoremap U <Cmd>redo<CR>
 
 command W w
@@ -47,43 +19,31 @@ command Q q
 command WQ wq
 command Wq wq
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin off
+filetype indent off
+filetype off
 
-set termguicolors background=light
-highlight clear
+autocmd BufNewFile,BufRead $VIMRUNTIME/doc/*.txt setf help
+autocmd BufNewFile,BufRead *.vim,.vimrc,vimrc,vim,.exrc,_exrc setf vim
+autocmd BufNewFile,BufRead .viminfo,_viminfo setf viminfo
+autocmd BufNewFile,BufRead *.ada,*.adb,*.ads,*.gpr,*.ada_m,*.adc setf ada
+autocmd BufNewFile,BufRead *.g4 setf antlr4
+autocmd BufNewFile,BufRead *.scpt setf applescript
+autocmd BufNewFile,BufRead *.awk setf awk
+autocmd BufNewFile,BufRead *.bib setf bib
+autocmd BufNewFile,BufRead *.BUILD,BUILD,*.bzl setf bzl
+autocmd BufNewFile,BufRead *.js,*.es setf javascript
+autocmd BufNewFile,BufRead *.ts setf typescript
+autocmd BufNewFile,BufRead *.c,*.C setf ansi_c
+autocmd BufNewFile,BufRead *.cpp,*.cc,*.cxx,,*.pp,*.hh,*.hxx setf cpp
+autocmd BufNewFile,BufRead *.html setf html
+autocmd BufNewFile,BufRead *.css setf css
+autocmd BufNewFile,BufRead *.cu,*.cuh setf cuda
+autocmd BufNewFile,BufRead *.py setf python
+autocmd BufNewFile,BufRead *.go setf go
+autocmd BufNewFile,BufRead *.rs setf rust
+autocmd BufNewFile,BufRead *.java setf java
+autocmd BufNewFile,BufRead *.zig setf zig
+autocmd BufNewFile,BufRead [mM]akefile setf make
 
-highlight! link Terminal Normal
-highlight! link LineNrAbove LineNr
-highlight! link LineNrBelow LineNr
-highlight! link CurSearch Search
-highlight! link CursorLineFold CursorLine
-highlight! link CursorLineSign CursorLine
-highlight! link EndOfBuffer NonText
-highlight! link MessageWindow Pmenu
-highlight! link PopupNotification Todo
-highlight! link MatchParen Normal
-highlight! link Todo Comment
-highlight! link VertSplit StatusLine
-highlight! link StatusLineNC StatusLine
-highlight! link Type Normal
-highlight! link Directory Normal
-highlight! link LineNr Normal
-highlight! link VisualNOS Visual
-highlight! link Identifier Normal
-highlight! link PreProc Normal
-highlight! link SpecialKey Constant
-highlight! link Special Constant
-highlight! link IncSearch Search
-highlight! link Title Normal
-highlight! link CursorLineNr Normal
-highlight! link Underlined Normal
-
-highlight Normal guifg=#e7e1d4 guibg=#1e40ae gui=NONE
-highlight StatusLine guifg=#e7e1d4 guibg=#1e40ae gui=reverse
-highlight Visual guifg=#c5674f guibg=NONE cterm=reverse
-highlight Statement guifg=#fce147 guibg=NONE gui=NONE cterm=bold
-highlight Constant guifg=#65e4f7 guibg=NONE gui=NONE
-highlight Comment guifg=#90c2fb guibg=NONE gui=NONE
-highlight Search guifg=#f7b676 guibg=NONE cterm=REVERSE
-
-" vim: ft=vim
+syntax enable
