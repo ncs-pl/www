@@ -27,16 +27,9 @@
         column-rule-style: none;
       }
 
-      ::selection {
-	background-color: rgb(117 172 29);
-      }
+      ::selection { background-color: rgb(117 172 29); }
 
-      H1 {
-        text-align: center;
-	font-size: 34pt;
-	font-weight: 900;
-      }
-
+      H1 { text-align: center; font-size: 34pt; font-weight: 900; }
       H2 {
         text-align: center;
 	padding: 3px;
@@ -44,8 +37,7 @@
 	font-weight: 800;
       }
 
-      A,
-      A:visited {
+      A, A:visited {
         background-color: rgb(30 105 64);
         color: rgb(246 234 220);
 	text-decoration: underline;
@@ -68,171 +60,142 @@
       }
 
       STRONG,
-      EM {
-        font-weight: 400;
-	font-style: italic;
-	font-family: ui-serif, serif;
-      }
+      EM { font-weight: 400; font-style: italic; font-family: ui-serif, serif; }
     </STYLE>
   </HEAD>
   <BODY>
     <H1 ID="nicolas">Nicolas and the electronic waste land of the WWW</H1>
 
     <P>
-      Hello, my name is Nicolas and I try to write
-      recreative computer programs for fun and non-profits,
-      all of which I sometimes share below.  Tip: click on
-      the date to obtain the permanant link to the log entry.
+      Hello, my name is Nicolas and I try to write recreative programs for fun
+      and not profits.  I sometimes share some thoughts about it below.
+      Tip: click the date to obtain a permanant link to the entry.
+      You can contact me via electronic mailing at <CODE>nico@puffer.fish</CODE>
+      and find me on Mastodon at <CODE>@nico@puffer.fish</CODE>.
       <CODE>&copy; 2015-2025</CODE>.
     </P>
 
+    <!------------------------------------------------------------------------->
+
+    <H2 ID="20250618">Make it feel alive please.</H2>
+
     <P>
-      You can contact me via electronic mailing at
-      <CODE>nico@puffer.fish</CODE> and Mastodon at
-      <CODE>@nico@puffer.fish</CODE>.  Some code of mine
-      are available on-line.
+      <A HREF="#20250618">June 2025</A> &mdash; It's 1960. You're working
+      your first job since graduation, between all the noises coming from
+      machines.  You are there, writing some FORTRAN on punched cards, waiting
+      for the previous ones to be compiled.  It takes a few hours, or maybe a
+      few days; not that it matters really, the operators will scream your name
+      anyway.  Such a wonderful era, right?  I don't know, I wasn't born yet.
+    </P>
+
+    <P>
+      Still, I can feel it: I write my fancy Rust code and wait seconds, if not
+      minutes, for it to compile and print a message in the terminal.  That's
+      slow, way too slow.  We need shorter feedback loops, to make our tools
+      feel alive and reactive.  And we can: Chuck Moore could do it with
+      satellites in space and Joe Armstrong could do it with telecom systems
+      running without shutting it down.  Heck, some random guy on Hacker News
+      will rant about how he could do it in Visual Basic before the new
+      millennium.
+    </P>
+
+    <P>
+      One solution is to reduce the build complexity and time to the point of
+      having none.  The <CODE>#nobuild</CODE> movement on the Web demonstrates
+      it, claiming that "you can't get faster than No Build".  Naive but ok:
+      save the file and reload the page!  However, it doesn't for anything
+      more complex.  Compilers are necessary for any data transformations.
+    </P>
+
+    <P>
+      There must be alternatives, and there are.  The current way of designing
+      systems is rooted in the absurdity of starting from a blank slate.
+      That you are somewhere empty, without data or code, that only your code
+      can fill.  This is far from the truth.  Maybe it is when working on a
+      bootloader, but it isn't for anything above in the stack. There is data
+      stored, other processes, and external hardware components.
+    </P>
+
+    <P>
+      Use their existence, exploit their presence.  If there is a database, then
+      make my queries interactive.  <A HREF="https://kx.com/products/kdb/">kdb+
+      </A> does it and it's fast.  If there is existing code, provide live
+      recompilation à la <A HREF="https://www.erlang.org/">Erlang</A>.
+      <A HREF="https://squeak.org/">Smalltalk</A> can inspect running objects
+      while <A HREF="https://cycling74.com/products/max">Max</A> makes live
+      performances of music a creative joy.  What can you do?
+    </P>
+
+    <P>
+      Static compilation is useful, especially for optimisation, but it kills
+      prototyping.  Fast compilation time won't help either.  Abstract
+      time and state instead!  Make me travel time, explore possibilities, and
+      change code on the fly.  Create a trial-and-error process that matters
+      because it is the only way to build systems that adapts quickly.
+      The specification is not right the first time, and it most likely never
+      will be.  Even governments fail, despite their billions of dollars and
+      thousands of expert consultants.  Iteration is key and living systems
+      mold.
     </P>
 
     <!------------------------------------------------------------------------->
 
-    <H2 ID="20250618">Give your computer systems some life.</H2>
+    <H2 ID="20250617">Structural essence of number manipulation
+                      machinery.</H2>
 
-    <P>
-      <A HREF="#20250618">June 2025</A> &mdash; It's 1960,
-      you are working your first job since you graduated.
-      Between all the noises from computers and machines,
-      you are there punching FORTRAN code on stock cards
-      while waiting for the previous ones to compile.
-      It has been a few hours, or maybe a day.  You don't
-      really know since you must wait for the operator to
-      call you back.  Don't you remember?  I don't because
-      I wasn't alive in the sixties.
-    </P>
+    <P><A HREF="#20250617">June 2025</A> &mdash; In the
+       twelfth century, Persian mathematician Muhammad
+       al-Khwarizmi started codifying the use of numbers and
+       their various applications, leading to the notion of
+       algorithms.  Today, we use algorithms everywhere: to
+       automate processes, speed up boring work, or entertain
+       us.  Yet, despite the years flying by and the rise of
+       electronics, there is still an essential but often
+       forgotten way of structuring algorithms which, when
+       misunderstood, creates inefficient computing systems.</P>
 
-    <P>
-      Yet, I can feel the pain given the similarities to
-      contemporary computer programming: write fancy code
-      and wait tens of seconds, if not minutes, for it to
-      compile, assuming incremental compilation!  Never
-      will I try Chromium's hours-long compilation.
-    </P>
+    <P>For the moment, forget about Big O, Turing machines,
+       and all the other formal stuff from academia, that is,
+       let's focus not on the function but on the form of
+       our ideas.  An algorithm is a sequence of steps, or
+       at least I said so.  Whether it is sentences written
+       on a page, boxes linked with arrows in a graphic, or
+       mathematical functions in a computation machine,
+       there will always be these steps and sequences.</P>
 
-    <P>
-      This is slow, way too slow.  I know that optimisation
-      introduce delays, but most of them are useless when
-      programming.  Let me iterate instantly as Chuck Moore
-      and Joe Armstrong could on off-world satellites
-      oe telecommunication systems.  Some might argue that
-      interactive programming is not always acceptable, but
-      most systems written today aren't linear nor trivial.
-      We need shorter feedback loops.
-    </P>
+    <P>The steps form phases in a pipeline: if A is followed
+       by B, then B shall not occur before A.  That is not
+       to say the implementation of both A and B cannot be
+       tasks happening concurrently, but it is that for the
+       same data flowing within the pipeline, its treatment
+       by step A should finish before step B starts.</P>
 
-    <P>
-      A popular solution is reducing the build complexity
-      to the point of eliminating build tools.  The Web
-      community have illustrated the idea with the
-      <CODE>#nobuild</CODE> movement, claiming that "you
-      can't get faster than No Build".  Visual Basic people
-      may look back at their golden age too.  Naive but it
-      works: save the file and reload the page.  Tada!
-    </P>
+    <P>Naturally, this pipelining behaviour could be
+       exploited to increase the raw performance and speed
+       of the implementation, as it is in modern RISC
+       micro-computers and real-time software: when processing
+       the third step of the pipeline on some data, you can
+       also be processing the second step for the next data,
+       while the fourth step is processing the previous data.
+       One may even go further by trying to do runtime
+       analysis of data dependencies to dynamically execute
+       steps out of order and achieve more optimal execution.</P>
 
-    <P>
-      There are other possibilities.  I mentioned Erlang and
-      FORTH yet we should not forget about kdb, SwiftUI, or
-      <EM>live coding</EM> in general.  Look at the TOPLAP
-      community and explain me why we cannot do the same?
-    </P>
+    <P>But be advised not to be too crazy!  Especially, do
+       not disguise the pipeline as something it is not.
+       Maybe your data represents actors in a scene, sending
+       messages to one another; but the algorithm certainly
+       isn't.  And remember Niklaus Wirth's <EM>"Algorithms
+       + Data Structures = Programs" </EM>, an idea he
+       believed in so strongly that it became the eponym of
+       one of his books.</P>
 
-    <P>
-      It's about trial and error, not fanciness; innately
-      studying the situation to crack it; a better way of
-      prototyping without the hassle of writing things
-      twice or shipping the prototype.  The first draft is
-      always wrong.  Even for governments, despite thousands
-      of consultants and billions of dollars.  Iteration is
-      key and living systems mold.
-    </P>
-
-    <P>
-      Abstract over time and state, provide time travel
-      debugging, hot module reloading with data migration,
-      runtime introspection, and get inspired by Smalltalk.
-      But remember that you are never starting from a blank
-      slate.  You must interact with the state, explore the
-      possibilities, and play with the system.
-    </P>
-
-    <!------------------------------------------------------------------------->
-
-    <H2 ID="20250617">Structural essence of number manipulation machinery.</H2>
-
-    <P>
-      <A HREF="#20250617">June 2025</A> &mdash; In the
-      twelfth century, Persian mathematician Muhammad
-      al-Khwarizmi started codifying the use of numbers and
-      their various applications, leading to the notion of
-      algorithms.  Today, we use algorithms everywhere: to
-      automate processes, speed up boring work, or entertain
-      us.  Yet, despite the years flying by and the rise of
-      electronics, there is still an essential but often
-      forgotten way of structuring algorithms which, when
-      misunderstood, creates inefficient computing systems.
-    </P>
-
-    <P>
-      For the moment, forget about Big O, Turing machines,
-      and all the other formal stuff from academia, that is,
-      let's focus not on the function but on the form of
-      our ideas.  An algorithm is a sequence of steps, or
-      at least I said so.  Whether it is sentences written
-      on a page, boxes linked with arrows in a graphic, or
-      mathematical functions in a computation machine,
-      there will always be these steps and sequences.
-    </P>
-
-    <P>
-      The steps form phases in a pipeline: if A is followed
-      by B, then B shall not occur before A.  That is not
-      to say the implementation of both A and B cannot be
-      tasks happening concurrently, but it is that for the
-      same data flowing within the pipeline, its treatment
-      by step A should finish before step B starts.
-    </P>
-
-    <P>
-      Naturally, this pipelining behaviour could be
-      exploited to increase the raw performance and speed
-      of the implementation, as it is in modern RISC
-      micro-computers and real-time software: when processing
-      the third step of the pipeline on some data, you can
-      also be processing the second step for the next data,
-      while the fourth step is processing the previous data.
-      One may even go further by trying to do runtime
-      analysis of data dependencies to dynamically execute
-      steps out of order and achieve more optimal execution.
-    </P>
-
-    <P>
-      But be advised not to be too crazy!  Especially, do
-      not disguise the pipeline as something it is not.
-      Maybe your data represents actors in a scene, sending
-      messages to one another; but the algorithm certainly
-      isn't.  And remember Niklaus Wirth's <EM>"Algorithms
-      + Data Structures = Programs" </EM>, an idea he
-      believed in so strongly that it became the eponym of
-      one of his books.
-    </P>
-
-    <P>
-      And when it comes to the function, that's the place
-      where you should be thinking about your algorithm's
-      properties: from determinism or scaling to
-      statefulness versus statelessness.  They are inherited
-      from your needs, not universals.  But one universal
-      is for sure that one shouldn't hide from the pipe.
-    </P>
+    <P>And when it comes to the function, that's the place
+       where you should be thinking about your algorithm's
+       properties: from determinism or scaling to
+       statefulness versus statelessness.  They are inherited
+       from your needs, not universals.  But one universal
+       is for sure that one shouldn't hide from the pipe.</P>
 
     <!------------------------------------------------------------------------->
   </BODY>
