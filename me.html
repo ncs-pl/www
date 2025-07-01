@@ -1,61 +1,98 @@
 <HTML LANG="en">
-  <HEAD>
-    <META CHARSET="utf-8">
-    <TITLE>~nico</TITLE>
-    <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
-    <LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
-    <STYLE>
-      @font-face {
-        font-family: 'Arsenale White';
-        src: url('./me_arsenale_white.ttf') format('truetype');
-      }
+<HEAD>
+<META CHARSET="utf-8">
+<TITLE>~nico</TITLE>
+<LINK REL="me" HREF="https://mastodon.puffer.fish/@nico">
+<STYLE>
+BODY {
+  width: 48ch;
+  margin: auto;
+  padding: 0.6em;
+  background-color: rgb(0 0 0);
+  color: rgb(109 109 109);
+  font-family: ui-monospace, monospace;
+  font-size: 13pt;
+}
 
-      BODY {
-        max-width: 22em;
-        margin: auto;
-        padding: 0.6em;
-        background-color: rgb(0 0 0);
-        color: rgb(215 225 236);
-        font-family: 'Arsenale White', ui-serif, serif;
-        font-size: 2.47em;
-        font-weight: 500;
-        line-height: 1.2em;
-      }
+::selection { color: rgb(255 255 255); }
+PRE CODE { color: rgb(250 48 5); }
 
-      H1 {
-        text-align: center;
-        font-size: 4em;
-        font-weight: 800;
-        margin-bottom: 0.2em;
-        line-height: 0.76em;
-      }
+H1 {
+  text-align: center;
+  font-size: 13pt;
+  font-weight: 400;
+}
 
-      A, A:visited, A:hover { color: unset; text-decoration: underline; }
-      OL { list-style-type: lower-roman; list-style-position: outside; }
-    </STYLE>
-  </HEAD>
-  <BODY>
-    <H1 ID="nicolas">~nico</H1>
-    <P>Hello, my name is Nicolas and I sometimes write recreative programs.
-       You can electronic mail me via nico at puffer dot fish.  Instead of
-       writing long and useless articles, I have written here concise and
-       thoughtfull sentences I believe are true about computer programming
-       and system engineering.  Copyright twenty fifteen.</P>
-    <OL>
-      <LI>Hardware must always be the reality to target.</LI>
-      <LI>Programming a computer will never be a natural activity.</LI>
-      <LI>Notation is too often overlooked, have a look at APL.</LI>
-      <LI>If there's a mismatch between the implementation and the
-          specification then the implementation is right.</LI>
-      <LI>Function composition, not application, is the modularity to
-          reach for.</LI>
-      <LI>Bad abstractions lie, good abstractions hide.</LI>
-      <LI>Interacting is the machine obeying the human while programming
-          is the human obeying the machine.</LI>
-      <LI>A function is nothing but a sequence of instructions manipulating
-          numbers.</LI>
-      <LI>The compiler is amazing but never to be fully trusted.</LI>
-      <LI>Most programming languages and operating systems are lying.</LI>
-    </OL>
-  </BODY>
+OL {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+}
+
+UL {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+A, A:visited {
+  text-decoration: none;
+  color: rgb(62 166 255);
+}
+
+A:hover {
+  text-decoration: none;
+  color: rgb(230 197 71);
+}
+</STYLE>
+</HEAD>
+<BODY>
+<PRE><CODE>
+                           _
+        @|\@@        _ __ (_) ___ ___
+       -  @@@@      | '_ \| |/ __/ _ \
+      /7   @@@@     | | | | | (_| (_) |
+     /    @@@@@@    |_| |_|_|\___\___/
+     \-' @@@@@@@@`-_______________
+      -@@@@@@@@@             /    \
+ _______/    /_       ______/      |__________-
+/,__________/  `-.___/,_____________----------_)
+</CODE></PRE>
+
+<H1 ID="nicolas"><A HREF="#nicolas">~nico</A></H1>
+
+<P>Copyright 2015-2025.</P>
+
+<P>
+Hello, my name is Nicolas and I write software
+for a living.  You can electronic mail me at
+<A HREF="mailto:nico@puffer.fish"><CODE>
+nico@puffer.fish</CODE></A>.
+Here is some links to my projects or anything
+else:
+<A HREF="./me_vim.txt">Vim</A>,
+<A HREF="./me_ghostty.txt">Ghostty</A>,
+<A HREF="https://github.com/discordnova/Nova">Nova</A>,
+<A HREF="https://github.com/sail-pl/OcamlFRP/tree/l3minerve">OcamlFRP</A>,
+<A HREF="https://forgejo.puffer.fish/nico/userscripts">Userscripts</A>,
+<A HREF="https://forgejo.puffer.fish/nico/clawflake">Clawflake</A>,
+<A HREF="https://forgejo.puffer.fish/nico/crocc">Crocc</A>,
+<A HREF="https://forgejo.puffer.fish/nico/svgu">SVGU</A>, and
+<A HREF="https://github.com/ncs-pl/life2">Life2</A>.
+</P>
+
+<P>
+Instead of long and useless articles, here is
+a few concise sentences I believe are important
+about programming a computer.
+</P>
+
+<OL>
+<LI>Programming will never be natural.</LI>
+<LI>Implementation primes over specification.</LI>
+<LI>Notation is overlooked.</LI>
+<LI>Function composition is modularity.</LI>
+<LI>Good abstractions don't lie.</LI>
+<LI>Compilers can't be fully trusted.</LI>
+<LI>The best API is a memory buffer.</LI>
+</OL>
+</BODY>
 </HTML>
